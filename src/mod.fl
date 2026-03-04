@@ -4,9 +4,13 @@
 
 pub mod iterator_trait;
 pub mod range_iterator;
+pub mod iterator_adapters;
+pub mod iterator_consumers;
 
 pub use iterator_trait::{Iterator, IteratorItem, IteratorState, VecIterator, SliceIterator, IteratorPool};
 pub use range_iterator::{RangeIterator, SteppedRangeIterator, ReverseRangeIterator, RangeBounds, RangeType};
+pub use iterator_adapters::{MapIterator, FilterIterator, ZipIterator, Pair, ChunkIterator, EnumerateIterator};
+pub use iterator_consumers::{Collector, VecCollector, SumCollector, fold, reduce, for_each, any, all, find};
 
 use std::time::SystemTime;
 
